@@ -1,0 +1,33 @@
+section.cart-help {
+  text-align:center;
+  .heading-wrap {
+    padding:25px 0;
+    background:$gray-lt;
+    h2 {
+      color:$charcoal;
+      margin:0;
+      font-weight:200;
+      text-transform:uppercase;
+      b, strong {
+        font-weight:700;
+      }
+    }
+  }
+  .content-wrap {
+    padding:35px 0;
+    background:$gray-md;
+    color:#fff;
+    font-size:26px;
+    p {
+      margin-bottom:10px;
+    }
+    a {
+      color:#fff;
+      text-decoration:underline;
+      
+      &:hover {
+        color:$yellow;
+      }
+    }
+  }
+}

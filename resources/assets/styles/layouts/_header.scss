@@ -1,0 +1,534 @@
+section#alert-bar {
+  background:$darkGreen;
+  width:100%;
+  padding:11px 0 10px;
+  color:#fff;
+  text-align:center;
+  font-size:17px;
+  box-sizing:border-box;
+  transition:all .3s ease;
+  z-index:201;
+  position:relative;
+  right:0;
+  p {
+    margin:0;
+  }
+  .container {
+    @include headingContainer;
+  }
+}
+nav#utility-bar {
+  background:rgba(#000, .5);
+  background-color: red;
+  line-height:50px;
+  height:50px;
+  top:0;
+  right:0;
+  width:100%;
+  box-sizing:border-box;
+  position:fixed;
+  z-index:201;
+  transition:right .3s ease;
+  color:rgba(#fff, .9);
+  font-family:$overlock;
+  font-size:16px;
+  letter-spacing: .04em;
+  .container {
+    @include headingContainer;
+    padding:0 0 0 160px;
+  }
+  a.brand {
+    width:140px;
+    height:140px;
+    background:url(../images/logo-bark-house.png) no-repeat center center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    display: block;
+    transition: none;
+    position:absolute;
+    @include hidetext;
+    z-index: 3;
+    top:-4px;
+    left:10px;
+  }
+  li {
+    display:inline-block;
+    margin-left:25px;
+  }
+  a {
+    color:#fff;
+    text-decoration:underline;
+    &:hover {
+      color:$yellow;
+    }
+  }
+  .utility-nav-wrap {
+    text-align:right;
+    li {
+      border-right:1px solid rgba(#fff, .2);
+      margin:0;
+      transition:all .3s ease;
+      float:right;
+      a {
+        text-decoration: none;
+        display:block;
+        line-height:50px;
+        padding:0 20px;
+        color:rgba(#fff, .9);
+      }
+      &.email {
+        a {
+          padding-right:55px;
+          background:url(../images/icon-email.svg) no-repeat 91% center;
+          background-size:25px 25px;
+        }
+      }
+      &.phone {
+        a {
+          padding-right:65px;
+          background:url(../images/icon-phone.svg) no-repeat 88% center;
+          background-size:30px 30px;
+        }
+      }
+      &.cart {
+        a {
+          padding-right:70px;
+          background:url(../images/cart.svg) no-repeat 84% center;
+          background-size:35px 42px;
+        }
+      }
+      &:hover {
+        background:rgba(#fff, .2);
+      }
+    }
+  }
+}
+header.banner {
+  width:100%;
+  top:0;
+  left:0;
+  z-index:200;
+  position:fixed;
+  box-sizing: border-box;
+  background-color:rgba(#000, .6);
+  transition:all .3s ease;
+  //transition:all .3s ease;
+  .container {
+    @include headingContainer;
+    padding-right:25px;
+  }
+  .nav-primary {
+    float:right;
+    font-family:$raleway;
+    font-weight:300;
+    ul.nav {
+      font-size:20px;
+      letter-spacing: .63px;
+      > li {
+        display:inline-block;
+        line-height:1;
+        vertical-align:top;
+        margin-right:5px;
+        > a {
+          letter-spacing:.025em;
+          color:#fff;
+          font-size:24px;
+          display:inline-block;
+          padding:28px 10px;
+          transition:all .2s ease;
+          &:hover {
+            color:$yellow;
+          }
+        }
+        &.current-menu-item, &.current_page_parent {
+          a {
+            color:$yellow;
+          }
+        }
+        &.menu-item-has-children {
+          position:relative;
+          &:after {
+            content:'>';
+            display:inline-block;
+            position:relative;
+            left:-5px;
+            font-size:120%;
+            transition:all .2s ease;
+            color:#fff;
+          }
+         /*  &:before {
+            content:'';
+            display:block;
+            width: 20px;
+            height:0px;
+            bottom:-53px;
+            right:-5px;
+            position:absolute;
+            z-index:20;
+            opacity:0;
+            transition:all .2s ease;
+          } */
+          &.open {
+            &:after {
+              transform:rotate(90deg);
+            }
+          /*   &:before {
+              opacity:1;
+              height:20px;
+              transform:rotate(45deg);
+            } */
+          }
+        }
+        ul.sub-menu {
+          height:0;
+          transition: height .3s ease;
+          overflow:hidden;
+          position:absolute;
+          top:100%;
+          background:rgba(#000, .8);
+          li {
+            a {
+              color:#fff;
+              font-size:22px;
+              display:block;
+              padding:7px 20px;
+              white-space: nowrap;
+              &:hover {
+                color:$yellow;
+              }
+            }
+            &:first-child {
+              padding-top:10px;
+            }
+            &:last-child {
+              padding-bottom:20px;
+            }
+          }
+          &.open {
+            display:block;
+          }
+        }
+        &.menu-mobile {
+          @media(min-width:993px) {
+            display:none;
+          }
+        }
+      }
+    }
+  }
+  .search-form-wrap, .menu-primary-navigation-container {
+    float:right;
+    form.search-form {
+      margin:25px 0 0 25px;
+      transition: all .3s ease;
+      input[type=search] {
+        background:none;
+        border:none;
+        appearance: none;
+        border-radius:0;
+        border-bottom:1px solid #fff;
+        font-family:$raleway;
+        font-weight:300;
+        font-size:18px;
+        letter-spacing: .015em;
+        width:160px;
+        color:#fff;
+      }
+      input[type=search]::placeholder {
+        color:#fff;
+      }
+      input[type=submit] {
+        border:none;
+        background:url(../images/icon-search.svg) no-repeat;
+        background-size:contain;
+        background-position:center;
+        @include hidetext;
+        width:25px;
+        height:25px;
+        top:-2px;
+        vertical-align:top;
+        appearance: none;
+        transition:all .3s ease;
+        cursor:pointer;
+        &:hover {
+          transform:scale(1.1);
+        }
+      }
+    }
+    &.menu-primary-navigation-container {
+      float:left;
+    }
+  }
+}
+body.scrolt {
+  header.banner {
+    background-color:rgba(#000, .85);
+  }
+  @media(min-width:993px) {
+    header.banner {
+      .nav-primary {
+        ul.nav {
+          > li {
+            a {
+              padding:13px 10px 15px;
+            }
+          }
+        }
+      }
+      .search-form-wrap {
+        form.search-form {
+          margin:10px 0 0 25px;
+        }
+      }
+    }
+  }
+}
+
+body.utility-bar {
+  header.banner {
+    padding-top:50px;
+    &.absolute {
+      top:88px !important;
+    }
+  }
+}
+body.alert-bar {
+  
+}
+#wpadminbar {
+  position:fixed;
+}
+@media(max-width:1350px) {
+  header.banner {
+    .nav-primary {
+      ul.nav {
+        font-size:18px;
+      }
+    }
+    button#search-toggle {
+      margin:40px 0 0 15px;
+    }
+  }
+}
+@media(max-width:1230px) {
+  nav#utility-bar {
+    .container {
+      padding:0 0 0 150px;
+    }
+    a.brand {
+      width:135px;
+      height:135px;
+    }
+    .welcome {
+      width:50%;
+    }
+    .utility-nav-wrap {
+      width:50%;
+      li {
+        &.phone, &.email {
+          a {
+            @include hidetext;
+            padding:0;
+            width:70px;
+            background-position:center;
+          }
+        }
+      }
+    }
+  }
+  header.banner {
+    .nav-primary {
+      ul.nav {
+        > li {
+          a {
+            font-size:20px;
+          }
+        }
+      }
+    }
+    button#search-toggle {
+      margin:40px 0 0 15px;
+    }
+  }
+}
+@media(min-width:993px) {
+  #menu-toggle, #mobile-menu {
+    display:none;
+  }
+  body.admin-bar {
+    header.banner {
+      top:32px;
+    }
+    &.utility-bar {
+      nav#utility-bar {
+        top:32px;
+      }
+    }
+  }
+}
+@media(max-width:992px) {
+  .mobile-menu-open {
+    a.brand {
+      opacity:0;
+    }
+  }
+  nav#utility-bar {
+    background:rgba(#000, .8);
+    a.brand {
+      transition:all .7s ease;
+    }
+    .welcome {
+      display:none;
+    }
+    .container {
+      padding:0 80px;
+    }
+    .utility-nav-wrap {
+      width:100%;
+      text-align:center;
+      line-height:.5;
+     // text-align:right;
+      ul {
+        display:inline-block;
+        margin:0 auto;
+      }
+      li {
+        vertical-align: top;
+        border-right:none;
+        &.phone {
+          border-right:none;
+        }
+        &.cart {
+          a {
+            background:none;
+            padding:0 10px;
+          }
+        }
+        &.login {
+          display:none;
+        }
+      }
+    }
+    #menu-toggle {
+      position:absolute;
+      right:20px;
+      width:50px;
+      height:50px;
+      z-index: 200;
+      padding:0;
+      .hamburger-box {
+        position:static;
+      }
+    }
+  }
+  header.banner {
+    display:none;
+    opacity:0;
+    transition:all .7s ease;
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:200;
+    top:0;
+    left:0;
+    text-align:center;
+    background:rgba(#000, .9) !important;
+    &.menu-open {
+      opacity:1;
+    }
+    .nav-primary {
+      text-align:center;
+      float:none;
+      margin-top:25px;
+      .menu-primary-navigation-container, .search-form-wrap {
+        float:none;
+      }
+      ul#menu-primary-navigation {
+        li {
+          display:block;
+          float:none;
+          margin-right:0;
+          margin-bottom:8px;
+          a {
+            padding:10px;
+            display:inline-block;
+          }
+        }
+      }
+      &.open {
+        display:block;
+      }
+      padding-bottom:190px;
+      background:url(../images/logo-bark-house.png) no-repeat bottom center;
+      background-size:150px 150px;
+    }
+  }
+  body.admin-bar {
+    #mobile-menu {
+      top:32px;
+    }
+    nav#utility-bar {
+      top:32px;
+    }
+    header.banner {
+      top:77px;
+    }
+  }
+}
+@media(max-width:768px) {
+  nav#utility-bar {
+    text-align:center;
+    a.brand {
+      width:100px;
+      height:100px;
+      top:-1px;
+      left:0;
+    }
+  }
+}
+
+@media(max-width:782px) {
+  body.admin-bar {
+    nav#utility-bar {
+      top:46px;
+    }
+    header.banner {
+      top:91px;
+    }
+  }
+}
+@media(min-width:481px) {
+  header.banner {
+    .cart-mobile {
+      display:none;
+    }
+  }
+}
+@media(max-width:480px) {
+  nav#utility-bar {
+    .utility-nav-wrap {
+      text-align:right;
+      li {
+        &.email, &.phone {
+          a {
+            width:45px;
+            background-size:25px 25px;
+          }
+        }
+        &.cart {
+          display:none;
+        }
+      }
+    }
+  }
+  header.banner {
+    .cart-mobile {
+      display:block;
+      a {
+        color:#fff;
+        padding: 10px;
+        display: inline-block;
+      }
+    }
+  }
+}

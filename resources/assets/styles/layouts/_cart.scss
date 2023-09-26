@@ -1,0 +1,145 @@
+
+.woocommerce-cart, .woocommerce-checkout {
+  table.shop_table {
+    border:none;
+    font-family:$overlock;
+    th {
+      font-family:$raleway;
+      border-bottom:1px solid $gray;
+    }
+    tr:last-child {
+      td {
+        border-top:1px solid $gray;
+      }
+    }
+    tr {
+      td {
+        padding-top:25px;
+        padding-bottom:25px;
+        &.actions {
+          padding-right:0;
+        }
+      }
+    }
+    td {
+      border-top:none;
+      border-bottom:none;
+    }
+    td.product-subtotal {
+      border-right:1px solid $gray;
+    }
+    td.product-remove {
+      border-left:1px solid $gray;
+      a.remove {
+        color:$charcoal !important;
+        font-weight:300;
+        font-family:$raleway;
+        font-size:40px;
+        margin:0;
+        width:auto;
+        position:relative;
+        top:-7px;
+        height:auto;
+        &:hover {
+          background:none;
+        }
+      }
+    }
+  }
+  table.cart {
+    img {
+      width:100px;
+      height:auto;
+    }
+  }
+  .woocommerce {
+    .cart {
+      button.button {
+        @include btn-border($beige, #fff);
+        font-size:20px;
+      }
+    }
+  }
+  .cart-collaterals {
+    .cart_totals {
+      width:35%;
+      h2 {
+        color:$green;
+        font-size:30px;
+      }
+      table.shop_table {
+        td {
+          padding-top:9px;
+          padding-bottom:9px;
+          vertical-align:top;
+          text-align:right;
+        }
+        th {
+          border:none;
+          border-top:1px solid $gray;
+        }
+      }
+    }
+  }
+  .wc-proceed-to-checkout {
+    a.checkout-button {
+      @include btn-border($green, #fff);
+      text-transform:none;
+      width:100%;
+      text-align:center;
+    }
+  }
+  @media(max-width:1200px) {
+    .cart-collaterals {
+      .cart_totals {
+        width:50%;
+      }
+    }
+    table.shop_table {
+      td.product-remove {
+        padding:0;
+        text-align:left;
+        border:none;
+      }
+    }
+  }
+  @media(max-width:768px) {
+    .cart-collaterals {
+      .cart_totals {
+        width:100%;
+      }
+    }
+    table.shop_table {
+      td.product-remove {
+        padding:0;
+        text-align:left !important;
+        border:none;
+        a.remove {
+          display:inline-block;
+          padding-left:10px;
+          top:0;
+        }
+      }
+      tr {
+        td {
+          padding-top:10px;
+          padding-bottom:10px;
+          &.product-name {
+            padding-top:0;
+          }
+          &.product-subtotal {
+            border:none;
+            padding-bottom:15px;
+          }
+          &.actions {
+            background-color:transparent;
+            padding-left:0;
+            button.button {
+              margin-left:0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

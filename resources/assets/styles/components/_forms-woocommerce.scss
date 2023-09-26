@@ -1,0 +1,56 @@
+body {
+  .woocommerce {
+    form {
+      input[type=text], input[type=email], input[type=password], input[type=tel], textarea {
+        border: 1px solid $gray;
+        background: #fff;
+        height: 40px;
+        line-height: 40px;
+        font-family: $raleway;
+        font-size: 18px;
+        border-radius: 0;
+        padding: 0 10px;
+        color:$charcoal;
+      }
+      textarea {
+        line-height: 1.2;
+        padding:10px;
+        min-height:200px;
+      }
+      select:not(#billing_country) {
+        border:1px solid $gray;
+        border-radius:0 !important;
+        appearance:none;
+        position:relative;
+        line-height:40px;
+        height:40px;
+        background:url(../images/arrows-select.svg) right no-repeat $gray-lt;
+        background-size:contain;
+        padding:0 50px  0 8px !important;
+        font-size:18px;
+        cursor:pointer;
+        color:$charcoal;
+        width:100%;
+        border-radius:0;
+        font-family: $raleway;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          appearance:auto;
+          background:none !important;
+          padding:0 0 0 5px !important;
+          width:auto;
+        }
+      }
+      .form-row {
+        span {
+          display:inline-block;
+          margin-top:5px;
+          font-size:18px;
+        }
+      }
+      button.button, button.button.alt {
+        @include btn-border($green, #fff);
+        margin-top:15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/** Colors */
+$blue:           #46578e;
+$green:          #537c4a;
+$green-lt:       lighten($green, 15%);
+$darkGreen:      #51694f;
+$red:            #c53d2f;
+$beige:          #7a7874;
+$gray-md:        #52514d;
+$charcoal:       #3d3d3d;
+$gray-lt:        #ececec;
+$gray:           #AAABAB;
+$brown:          #5c5649;
+$yellow:         #ecc142;
+$black:          #0d0d0d;
+
+$raleway:  'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$lato: 'Lato', sans-serif;
+$overlock: 'Overlock', Georgia, "Times New Roman", Times, serif;
+
+$textColor: $gray-md;
+$headingColor: $green;
+$linkColor: $green;
+$linkHoverColor: $gray;
+
+$hamburger-layer-height: 2px;
+$hamburger-layer-color: #fff;
+$hamburger-layer-width: 35px;
+$hamburger-layer-spacing: 7px;
+
+$headingFont: $raleway;
+$bodyFont: $lato;
+
+$h1size: 34px;
+$h2size: 32px;
+$h3size: 28px;
+$h4size: 24px;
+$h5size: 22px;
+$h6size: 22px;
+
+$spacer: 2rem;

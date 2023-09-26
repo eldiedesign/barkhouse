@@ -1,0 +1,42 @@
+section.awards {
+  box-sizing:border-box;
+  padding-bottom:65px;
+  h2 {
+    font-family:$raleway;
+    font-size:24px;
+    line-height:1.2;
+    margin:0 auto 10px;
+    text-align:center;
+    font-weight:700;
+    color:$green;
+  }
+  h3 {
+    font-size:26px;
+    line-height:1.2;
+    margin:0 auto 10px;
+    text-align:center;
+    color:$beige;
+  }
+  .award {
+    padding:0 20px;
+    box-sizing:border-box;
+    margin-bottom:25px;
+    p {
+      font-size:16px;
+    }
+    &:nth-child(3n+1) {
+      clear:left;
+      padding: 0 40px 0 0;
+    }
+    &:nth-child(3n+3) {
+      padding: 0 0 0 40px;
+    }
+    .the-image {
+      padding-top:60%;
+      background-size:contain !important;
+      background-position: center !important;
+      width:70%;
+      margin:0 15% 25px;
+    }
+  }
+}

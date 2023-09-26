@@ -1,0 +1,316 @@
+section.connected {
+  text-align:center;
+  background:url(../images/barkhouse-banner-bark.jpg) no-repeat center;
+  background-size:cover;
+  color:#fff;
+  position:relative;
+  &:before {
+    content:'';
+    display:block;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(#000, .5);
+    position:absolute;
+  }
+  .container {
+    padding-top:65px;
+    padding-bottom:65px;
+    position:relative;
+    z-index:2;
+    h2 {
+      color:#fff;
+      font-family:$overlock;
+      font-size:46px;
+      letter-spacing: 0;
+      margin:0 0 10px;
+      font-weight:900;
+    }
+    h3 {
+      color:#fff;
+      font-family:$raleway;
+      font-size:27px;
+      letter-spacing: 0;
+      margin:0 0 25px;
+      font-weight:300;
+    }
+  }
+  form {
+    margin-bottom:45px;
+    input[type=email] {
+      background:#fff;
+      height:40px;
+      line-height:40px;
+      border:none;
+      width:420px;
+      font-family:$overlock;
+      font-size:18px;
+      letter-spacing: 0;
+      color:$charcoal;
+      padding:0 10px;
+      display:inline-block;
+      vertical-align:top;
+      &::placeholder {
+        color:$gray;
+      }
+    }
+    input[type=submit] {
+      @include btn-default($yellow, #000);
+      margin-left:3px;
+    }
+  }
+  .contact-links {
+    position:relative;
+    z-index:2;
+    padding:25px 0;
+    background:rgba(#000, .6);
+    @include clearfix;
+    .col-4 {
+      padding:65px 0 25px;
+      &.contact-address {
+        padding:45px 0;
+      }
+    }
+    .contact-email, .contact-phone {
+      a {
+        color:#fff;
+        font-size:27px;
+        font-family:$raleway;
+        display:inline-block;
+        padding-top:75px;
+        font-weight:200;
+        &:hover {
+          color:$yellow;
+        }
+      }
+    }
+    .contact-email {
+      a {
+        background:url(../images/icon-email-alt.svg) no-repeat top center;
+        background-size:60px 60px;
+      }
+    }
+    .contact-phone {
+      float:right;
+      a {
+        background:url(../images/icon-phone.svg) no-repeat top center;
+        background-size:60px 60px;
+      }
+    }
+    .contact-address {
+      border-left:1px solid rgba(#fff, .3);
+      border-right:1px solid rgba(#fff, .3);
+      h3 {
+        font-size:37px;
+        color:#fff;
+        letter-spacing: .05em;
+        text-transform:uppercase;
+        margin:0;
+        font-weight:bold;
+      }
+      a, span {
+        display:inline-block;
+        padding-bottom:95px;
+        font-family:$raleway;
+        color:#fff;
+        font-size:23px;
+        font-weight:300;
+        background:url(../images/icon-map.svg) no-repeat bottom center;
+        background-size:80px 80px;
+      }
+      a:hover {
+        color:$yellow;
+      }
+    }
+  }
+  @media(max-width:1200px) {
+    .container {
+      h2 {
+        font-size:40px;
+      }
+      h3 {
+        font-size:24px;
+      }
+    }
+    .contact-links {
+      .col-4 {
+        padding:35px 0;
+      }
+      .contact-phone, .contact-email {
+        margin-top:20px;
+        a {
+          padding-top:60px;
+          font-size:22px;
+          background-size:45px 45px;
+        }
+      }
+      .contact-address {
+
+        h3 {
+          font-size:32px;
+        }
+        a {
+          font-size:20px;
+          padding-bottom:75px;
+          background-size:60px 60px;
+        }
+      }
+    }
+  }
+  @media(max-width:992px) {
+    form {
+      input[type=email] {
+        font-size:16px;
+      }
+    }
+    .contact-links {
+      .col-4 {
+        padding:30px 0;
+      }
+      .contact-phone, .contact-email {
+        a {
+          font-size:18px;
+        }
+      }
+      .contact-address {
+        h3 {
+          font-size:28px;
+        }
+        a {
+          font-size:18px;
+        }
+      }
+    }
+  }
+  @media(max-width:768px) {
+    .container {
+      h2 {
+        font-size:36px;
+      }
+      h3 {
+        font-size:22px;
+      }
+    }
+    form {
+      input[type=email], input[type=submit] {
+        width:80%;
+        margin-left:10%;
+        box-sizing:border-box;
+        display:block;
+        float:none;
+      }
+      input[type=email] {
+        margin-bottom:15px;
+      }
+    }
+    .contact-links {
+      .contact-address {
+        width:80%;
+        float:none;
+        margin:0 auto;
+        border:none;
+        padding-top:20px;
+      }
+      .contact-email, .contact-phone {
+        width:20%;
+        float:none;
+        display:inline-block;
+        padding:0;
+        a {
+          @include hidetext;
+          background-position:center;
+          width:75px;
+          height:75px;
+          padding:0;
+        }
+      }
+    }
+  }
+  @media(max-width:575px) {
+    form {
+      margin-bottom:25px;
+      input[type=email], input[type=submit] {
+        width:90%;
+        margin-left:5%;
+      }
+    }
+    .container {
+      h3 {
+        font-size:20px;
+      }
+    }
+  }
+}
+.woocommerce-account {
+  section.connected {
+    .contact-links {
+      background:none;
+    }
+    .connected-wrap {
+      background:rgba(#000, .6);
+    }
+  }
+}
+ul.social {
+  margin:0;
+  padding:0;
+  li {
+    display:inline-block;
+    margin:0 4px;
+    a {
+      display:block;
+      width:84px;
+      height:84px;
+      background:url(../images/icons-social-lt.svg) no-repeat;
+      @include hidetext;
+      background-size:420px 84px;
+      &.twitter {
+        background-position:-84px center;
+      }
+      &.instagram {
+        background-position:-168px center;
+      }
+      &.linkedin {
+        background-position:-252px center;
+      }
+      &.youtube {
+        background-position:-336px center;
+      }
+      &:hover {
+        transform:scale(1.1);
+      }
+    }
+  }
+  @media(max-width:768px) {
+    li {
+      display:inline-block;
+      margin:0 4px;
+      a {
+        display:block;
+        width:60px;
+        height:60px;
+        background:url(../images/icons-social-lt.svg) no-repeat;
+        @include hidetext;
+        background-size:300px 60px;
+        &.twitter {
+          background-position:-60px center;
+        }
+        &.instagram {
+          background-position:-120px center;
+        }
+        &.linkedin {
+          background-position:-180px center;
+        }
+        &.youtube {
+          background-position:-140px center;
+        }
+      }
+    }
+  }
+  @media(max-width:360px) {
+    li {
+      margin:0;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.wpcf7 {
+  input[type=text], input[type=tel], input[type=email] {
+    background:$gray-lt;
+    height:40px;
+    line-height:40px;
+    padding:0 10px;
+    font-size:18px;
+    border:none;
+    width:95%;
+    font-family:$lato;
+    margin-top:3px;
+  }
+  textarea {
+    background:$gray-lt;
+    height:40px;
+    padding:10px;
+    font-size:18px;
+    border:none;
+    width:95%;
+    min-height:200px;
+    font-family:$lato;
+    margin-top:3px;
+  }
+  input[type=submit] {
+    @include btn-default($green, #fff);
+  }
+}

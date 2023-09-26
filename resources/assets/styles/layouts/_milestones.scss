@@ -1,0 +1,237 @@
+.template-milestones {
+  img {
+    max-width:100%;
+    height:auto;
+  }
+  section.video {
+    clear:both;
+    h3 {
+      text-transform:uppercase;
+      text-align:center; 
+      margin-bottom:20px;
+    }
+    .container {
+      margin:85px auto 0;
+      max-width:960px;
+    }
+  }
+  .miles-wrap {
+    @include clearfix;
+    margin:55px auto 95px;
+  }
+  .timeline-wrap {
+    position:relative;
+    overflow-y:hidden;
+    padding-right:35px;
+    #leaf {
+      background:url(../images/milestone-bullet-active.png) no-repeat;
+      width:89px;
+      height:82px; 
+      position:absolute;
+      right:0px;
+      top:83px;
+      z-index:2;
+      transition:all .5s ease;
+      &.top {
+        top:5px;
+      }
+    }
+  }
+  #timeline {
+    position:relative;
+    transition:all .5s ease;
+    top:0;
+    .milestone-year {
+      height:90px;
+      line-height:90px;
+      background:url(../images/milestone-bullet.png) no-repeat right center; 
+      font-size:35px;
+      font-family:$overlock;
+      text-align:right;
+      a {
+        display:block;
+        padding-right:85px;
+        color:#000; 
+        &:hover {
+          color:$green; 
+        }
+      }
+      a.decade {
+        font-size:60px;
+      }
+      a.active {
+        color:$green; 
+      }
+    }
+  }
+  .the-milestones {
+    padding-left:25px;
+    position:relative;
+    overflow:hidden;
+   // max-height:130vh;
+    #milestone-slider {
+      position:relative;
+      top:0;
+      transition:all .5s ease;
+    }
+    .stone {
+      margin-top:60px;
+      padding-top:25px;
+      border-top:2px solid $green;
+      &:first-child {
+        margin-top:0;
+        padding-top:0;
+        border-top:none;
+      }
+    }
+    .milestone {
+     /*  display:none;
+      &.active {
+        display:block;
+      } */
+    }
+    h3.slide-meta {
+      padding-right:155px;
+      margin-bottom:35px;
+      min-height:72px;
+      font-size:34px;
+      position:relative;
+      text-transform:uppercase;
+      font-family:$lato;
+      letter-spacing:0;
+      .subtitle {
+        font-size:32px;
+        text-transform:none;
+        display:block;  
+      } 
+      .milestone-year {
+        line-height:1;
+        position:absolute;
+        top:-11px;
+        letter-spacing:-.08em;
+        right:5px;
+        color:$green;
+        font-size:89px;
+        font-family:$overlock; 
+      }
+    }
+    p {
+      font-size:18px; 
+    }
+  }
+  @media(max-width:1200px) {
+    .the-milestones {
+      h3.slide-meta {
+        font-size:30px;
+        .subtitle {
+          font-size:28px; 
+        }
+        .milestone-year {
+          font-size:75px;
+        }
+      }
+    }
+  }
+  @media(max-width:992px) {
+    padding:0;
+    .timeline {
+      padding-left:0;
+      .milestone-year {
+        a.decade {
+          font-size:50px;   
+        }
+      }
+    }
+    .the-milestones {
+      padding-left:30px;
+      padding-right:0;
+      h3.slide-meta {
+        padding-right:85px;
+        font-size:25px;
+        .subtitle {
+          font-size:24px; 
+        }
+        .milestone-year {
+          font-size:43px;
+          top:-6px;
+        }
+      }
+    }
+  }
+  @media(max-width:768px) {
+    #timeline {
+      .milestone-year {
+        a {
+          font-size:28px;
+        }
+        a.decade {
+          font-size:34px;
+        }
+      }
+    }
+  }
+  @media(max-width:615px) {
+    .the-milestones {
+      padding-left:20px;
+      h3.slide-meta {
+        font-size:22px;
+        .subtitle {
+          font-size:20px;
+        }
+      }
+      p {
+        font-size:16px;
+      }
+    }
+    #timeline {
+      padding-right:5px;
+      #leaf {
+        width:70px;
+        height:64px;
+        background-size:contain;
+      }
+      .milestone-year {
+        a {
+          font-size:24px;
+        }
+        a.decade {
+          font-size:30px;
+        }
+      }
+    }
+  }
+  @media(max-width:480px) {
+    .the-milestones {
+      width:100%;
+      float:none;
+      padding-left:0;
+      padding-right:0;
+    }
+    #timeline {
+      width:100%;
+      float:none;
+      margin-bottom:20px;
+      padding-left:0;
+      padding-right:0;
+      text-align:center;
+      #leaf {
+        display:none;
+      }
+      .milestone-year {
+        width:65px;
+        text-align:center;
+        display:inline-block;
+        height:auto;
+        line-height:1.4;
+        background:none;
+        a {
+          padding-right:0;
+        }
+        a.decade {
+          font-size:24px;
+          font-weight:bold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@mixin containerwidth() {
+  width:90%;
+  max-width:1200px;
+  @media(max-width:992px) {
+    width:95%;
+  }
+  @media(max-width:575px) {
+    width:100%;
+    padding:0 25px;
+  }
+}
+@mixin container() {
+  @include containerwidth;
+  margin-left:auto;
+  margin-right:auto;
+  box-sizing:border-box;
+  padding:0 15px;
+  @include clearfix;
+}
+@mixin headingContainer() {
+  width:100%;
+  padding:0 65px;
+  max-width:none;
+  @media(max-width:992px) {
+    padding:0 35px;
+  }
+  @media(max-width:768px) {
+    padding:0 20px;
+  }
+}
+.container {
+  @include container;
+  &.container-wide {
+    max-width:none;
+    width:95%;
+    padding:0;
+  }
+}
+section {
+  width:100%;
+  @include clearfix;
+}
+div {
+  box-sizing:border-box;
+}
+
+// 12 column grid system - best part of Bootstrap. Medium, large, small designations will be handled via media queries as opposed to using the full-on BS system
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  float:left;
+  box-sizing:border-box;
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+  display:block;
+  @include clearfix;
+}

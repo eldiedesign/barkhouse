@@ -1,0 +1,25 @@
+.woocommerce-account {
+  nav.woocommerce-MyAccount-navigation {
+    ul {
+      list-style:none;
+      font-family:$overlock;
+      font-weight:500;
+      li {
+        padding:0;
+        margin-bottom:15px;
+        &:before {
+          display:none;
+        }
+        a {
+          text-decoration:underline;
+        }
+        &.is-active {
+          a {
+            color:$beige;
+            text-decoration:none
+          }
+        }
+      }
+    }
+  }
+}

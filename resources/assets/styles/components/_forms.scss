@@ -1,0 +1,120 @@
+
+.gform_wrapper, .inline-search {
+  input[type=text], input[type=email], input[type=number] {
+    padding-top:0;
+    padding-bottom:0;
+    height:40px;
+    line-height:40px;
+  }
+  label.gfield_label, label{
+    font-weight:400;
+    margin-bottom:0 !important;
+  }
+  ul.gform_fields {
+    li.gfield {
+      margin-top:25px;
+      box-sizing:border-box !important;
+      vertical-align:top;
+      &.gfield_error  {
+        border:none;
+        background:none;
+        label.gfield_label, label {
+          color:$textColor;
+          font-weight:bold;
+        }
+        input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea {
+          border:1px solid darken($red, 15%);
+        }
+      }
+      &.half-width {
+        display:inline-block;
+        width:calc(50% - 16px);
+        padding-right:0;
+        margin-right:16px;
+        input {
+          width:100%;
+        }
+      }
+    }
+  }
+  .gfield_required {
+    color:darken($red, 15%);
+  }
+  .validation_message {
+    color:darken($red, 15%);
+    padding-top:5px !important;
+  }
+  div.validation_error {
+    border:none;
+    color:darken($red, 15%);
+    padding-bottom:0;
+  }
+  select {
+    @include select;
+  }
+  form {
+    @include clearfix;
+    padding:30px 30px 40px;
+  }
+  input[type=text], input[type=email], input[type=number], textarea {
+    border:1px solid $charcoal;
+    border-radius:0;
+    &:focus {
+      clip: auto !important;
+      clip-path: none;
+      z-index: 100000;
+    }
+  }
+  input[type=search] {
+    border: 1px solid $charcoal;
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-family: $raleway;
+    font-size: 20px;
+    border-radius: 0;
+    padding: 0 20px;
+    width: 70%;
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    float:left;
+  }
+  input[type=submit] {
+    @include btn-yellow;
+  }
+}
+.inline-search {
+  max-width:800px;
+  padding-top:20px;
+  input[type=search] {
+    width:100%;
+    max-width:650px;
+    margin:0;
+    box-sizing:border-box;
+    float:none;
+    display:inline-block;
+  }
+  input[type=submit] {
+    display:inline-block;
+    float:none;
+    height:50px;
+    line-height:50px;
+    padding-top:0;
+    padding-bottom:0;
+    margin:0 !important;
+    box-sizing:border-box;
+  }
+  @media(max-width:992px) {
+    input[type=search] {
+      width:calc(100% - 150px);
+    }
+  }
+  @media(max-width:992px) {
+    input[type=search], input[type=submit] {
+      width:100%;
+      margin-bottom:10px;
+    }
+  }
+}

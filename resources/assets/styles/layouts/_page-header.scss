@@ -1,0 +1,117 @@
+.page-data, .blog, .single, .category, .search, .error404 {
+  .page-header {
+    padding:20px 0 0;
+    h1 {
+      margin:0px 0 65px;
+      position:relative;
+      font-size: 38px;
+      letter-spacing: 3.75px;
+      line-height: 1.1;
+      &:after {
+        content:'';
+        height:2px;
+        width:95px;
+        background:$headingColor;
+        display:block;
+        position:absolute;
+        bottom:-30px;
+        left:0;
+      }
+    }
+    &.has-featured-image {
+      padding:0;
+      margin-top:-35px;
+      .banner-image {
+        position:relative;
+        padding-top:25%;
+        background-size:cover !important;
+        background-position:center !important;
+        @media(max-width:1300px) {
+          height:320px;
+          padding:0;
+        }
+        @media(max-width:992px) {
+          height:280px;
+        }
+        @media(max-width:768px) {
+          height:240px;
+        }
+        .inner {
+          z-index:3;
+          position:absolute;
+          padding:0 10%;
+          width:100%;
+          box-sizing:border-box;
+          display:flex;
+          top:0;
+          left:0;
+          height:100%;
+          align-items:center;
+          justify-content: center;
+          flex-direction: column;
+          h2 {
+            margin:0 0 20px;
+            font-size:54px;
+            max-width:700px;
+            text-align:center;
+            color:#fff;
+            line-height:1.2;
+          }
+          p {
+            color:#fff;
+            font-weight:300;
+            letter-spacing:.8px;
+            text-align:center;
+          }
+          a {
+            @include btn-default($green, #fff);
+            text-transform:uppercase;
+            font-weight:300;
+            margin-top:25px;
+          }
+        }
+      }
+      h1 {
+        margin:75px 0 65px 0;
+      }
+    }
+    &.no-featured-image {
+      height:130px;
+      background:url(../images/barkhouse-banner-bark.jpg) no-repeat center;
+      background-size:cover;
+      padding:0;
+      h2 {
+        margin:0px 0 65px;
+        position:relative;
+        font-size: 38px;
+        letter-spacing: 3.75px;
+        line-height: 1.1;
+        &:after {
+          content:'';
+          height:2px;
+          width:95px;
+          background:$headingColor;
+          display:block;
+          position:absolute;
+          bottom:-30px;
+          left:0;
+        }
+      }
+      @media(max-width:1230px) {
+        height:126px;
+      }
+    }
+  }
+  &.blog, &.single-post, &.category, &.search, &.error404 {
+    .page-header.no-featured-image {
+      background:url(../images/barkhouse-banner-poplar-leaf.jpg) no-repeat center;
+      background-size:cover;
+    }
+  }
+  &.cat_panels {
+    .page-header.no-featured-image.panels {
+      background:url(../images/barkhouse-banner-panel.jpg) no-repeat center;
+      background-size:cover;
+    }
+  }
+}

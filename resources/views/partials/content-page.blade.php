@@ -1,0 +1,8 @@
+<?php $containerClass = is_checkout() ? 'checkout-wrap' : 'container'; ?>
+
+<section class="editor-content">
+  <div class="<?= $containerClass ?>">
+    @php the_content() @endphp
+    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+  </div>
+</section>
